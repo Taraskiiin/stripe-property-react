@@ -1,5 +1,11 @@
+import MainSectionStyled from './components/templates/MainSection';
+
 function App() {
-	return <></>;
+	return (
+		<>
+			<MainSectionStyled />
+		</>
+	);
 }
 
 export default App;
