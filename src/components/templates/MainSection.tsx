@@ -1,6 +1,6 @@
 import Logo from '../atoms/Logo';
+import NumberBlocksStyled from '../organisms/NumberBlocks';
 import styled from 'styled-components';
-import MainSectionNumber from '../atoms/MainSectionNumber';
 
 const MainSectionStyled = styled.section`
 	background-image: url('assets/main-bg.png');
@@ -40,7 +40,7 @@ export default function MainSection() {
 			<h1 className='main-title'>
 				Bespoke property developer specialising in digital
 			</h1>
-			<MainSectionNumber labels={'01'} />
+			<NumberBlocksStyled />
 		</MainSectionStyled>
 	);
 }
