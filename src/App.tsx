@@ -1,6 +1,7 @@
 import Navigation from './components/organisms/Navigation';
 import MainSectionStyled from './components/templates/MainSection';
 import Over20YearsSection from './components/templates/Over20YearsSection';
+import StatisticSectionStyled from './components/templates/StatisticSection';
 import styled from 'styled-components';
 
 const LandingStyled = styled.div`
@@ -14,6 +15,7 @@ function App() {
 			<LandingStyled>
 				<MainSectionStyled />
 				<Over20YearsSection />
+				<StatisticSectionStyled />
 			</LandingStyled>
 			<Navigation />
 		</>
