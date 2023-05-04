@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 const socialMediaNav = [
 	{ id: '1', href: '#', srcIcon: 'assets/icons/facebook-icon.svg' },
-	{ id: '1', href: '#', srcIcon: 'assets/icons/twitter-icon.svg' },
-	{ id: '1', href: '#', srcIcon: 'assets/icons/instagram-icon.svg' },
+	{ id: '2', href: '#', srcIcon: 'assets/icons/twitter-icon.svg' },
+	{ id: '3', href: '#', srcIcon: 'assets/icons/instagram-icon.svg' },
 ];
 
 const NavigationStyled = styled.div`

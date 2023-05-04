@@ -44,9 +44,8 @@ export default function NumberBlocks() {
 	return (
 		<NumberBlocksStyled>
 			{numberBlocksData.map((el) => (
-				<div onClick={() => setSelectedId(el.id)}>
+				<div onClick={() => setSelectedId(el.id)} key={el.id}>
 					<NumberBlock
-						key={el.id}
 						label={el.label}
 						title={el.title}
 						description={el.description}
