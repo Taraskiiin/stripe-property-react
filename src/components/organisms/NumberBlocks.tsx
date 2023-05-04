@@ -30,28 +30,29 @@ const numberBlocksData = [
 ];
 
 const NumberBlocksStyled = styled.div`
-	max-width: calc(100vw - 80px);
+	min-width: calc(100% - 80px);
+	position: absolute;
+	bottom: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: end;
 `;
 
 export default function NumberBlocks() {
 	const [selectedId, setSelectedId] = useState<string>('1');
 
-	const handleClick = (id: string) => {
-		setSelectedId(id);
-	};
-
-	console.log(selectedId);
-
 	return (
 		<NumberBlocksStyled>
 			{numberBlocksData.map((el) => (
-				<NumberBlock
-					label={el.label}
-					title={el.title}
-					description={el.description}
-					isActive={el.id === selectedId}
-					onClick={() => handleClick(el.id)}
-				/>
+				<div onClick={() => setSelectedId(el.id)}>
+					<NumberBlock
+						key={el.id}
+						label={el.label}
+						title={el.title}
+						description={el.description}
+						isActive={el.id === selectedId}
+					/>
+				</div>
 			))}
 		</NumberBlocksStyled>
 	);

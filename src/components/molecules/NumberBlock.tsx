@@ -7,7 +7,6 @@ interface NumberBlock {
 	title: string;
 	description: string;
 	isActive: boolean;
-	onClick: () => void;
 }
 
 interface NumberBlockStyled {
@@ -17,6 +16,21 @@ interface NumberBlockStyled {
 const NumberBlockStyled = styled.div<NumberBlockStyled>`
 	width: 100%;
 	padding-bottom: 48px;
+	padding-left: 64px;
+	cursor: pointer;
+	max-height: fit-content;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		min-height: 100vh;
+		width: 1px;
+		bottom: 0;
+		right: 0;
+		background-color: var(--white);
+		opacity: 0.2;
+	}
 
 	h3 {
 		font-style: normal;

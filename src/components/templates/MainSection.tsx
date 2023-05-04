@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const MainSectionStyled = styled.section`
 	background-image: url('assets/main-bg.png');
+	overflow: hidden;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -28,7 +29,7 @@ const MainSectionStyled = styled.section`
 		color: #ffffff;
 		max-width: 70%;
 		left: 50%;
-		top: 50%;
+		top: 40%;
 		transform: translate(-50%, -50%);
 	}
 `;
