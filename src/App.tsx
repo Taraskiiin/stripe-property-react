@@ -4,6 +4,7 @@ import Over20YearsSection from './components/templates/Over20YearsSection';
 import StatisticSectionStyled from './components/templates/StatisticSection';
 import FeedbacksCarousel from './components/templates/FeedbackCarousel';
 import GridSection from './components/templates/GridSection';
+import Footer from './components/templates/Footer';
 import styled from 'styled-components';
 
 const LandingStyled = styled.div`
@@ -20,6 +21,7 @@ function App() {
 				<StatisticSectionStyled />
 				<FeedbacksCarousel />
 				<GridSection />
+				<Footer />
 			</LandingStyled>
 			<Navigation />
 		</>
