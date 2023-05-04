@@ -16,6 +16,7 @@ const GridItemStyled = styled.div<GridItemStyled>`
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
+	border-radius: 4px;
 
 	&::after {
 		content: '';
@@ -26,6 +27,7 @@ const GridItemStyled = styled.div<GridItemStyled>`
 		height: 100%;
 		background-color: rgba(33, 43, 54, 0.5);
 		z-index: 2;
+		border-radius: 4px;
 	}
 
 	p {

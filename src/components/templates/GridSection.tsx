@@ -40,10 +40,14 @@ const GridSectionStyled = styled.section`
 	.first-block {
 		height: 300px;
 		width: 480px;
+		padding: 0 48px;
 		grid-area: 1 / 1 / 2 / 2;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		gap: 20px;
+		border: 1px solid rgba(22, 28, 36, 0.1);
+		border-radius: 4px;
 
 		h3 {
 			font-style: normal;
@@ -51,6 +55,29 @@ const GridSectionStyled = styled.section`
 			font-size: 32px;
 			line-height: 44px;
 			color: var(--primary);
+		}
+
+		p {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 28px;
+			color: var(--secondary);
+		}
+
+		button {
+			cursor: pointer;
+			border: none;
+			background: transparent;
+			width: fit-content;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 28px;
+			color: var(--primary);
+			display: flex;
+			align-items: center;
+			gap: 6px;
 		}
 	}
 `;
