@@ -12,6 +12,7 @@ const socialMediaNav = [
 const NavigationStyled = styled.div`
 	position: fixed;
 	z-index: 100;
+	top: 0;
 	right: 0;
 	width: 80px;
 	height: 100vh;
@@ -26,6 +27,9 @@ const NavigationStyled = styled.div`
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
 	}
 `;
 
