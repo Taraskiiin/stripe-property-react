@@ -28,7 +28,7 @@ const statisticData = [
 	},
 ];
 
-const StatisticSectionStyled = styled.div`
+const StatisticSectionStyled = styled.section`
 	padding: 81px 0 160px 0;
 	width: 100%;
 	display: grid;

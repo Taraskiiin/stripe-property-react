@@ -24,7 +24,7 @@ const carouselList = [
 	},
 ];
 
-const FeedbacksCarouselStyled = styled.div`
+const FeedbacksCarouselStyled = styled.section`
 	padding: 160px 0 116px 0;
 	width: 100%;
 	background-color: #f3f3f5;
