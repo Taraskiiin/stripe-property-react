@@ -1,3 +1,4 @@
+import FooterTopPart from '../organisms/FooterTopPart';
 import styled from 'styled-components';
 
 const FooterStyled = styled.footer`
@@ -7,5 +8,9 @@ const FooterStyled = styled.footer`
 `;
 
 export default function Footer() {
-	return <FooterStyled>Footer</FooterStyled>;
+	return (
+		<FooterStyled>
+			<FooterTopPart />
+		</FooterStyled>
+	);
 }
