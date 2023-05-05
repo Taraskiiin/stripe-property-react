@@ -25,6 +25,7 @@ const ButtonStyled = styled.button<ButtonStyled>`
 	background-color: ${(props) =>
 		props.isBlue ? 'var(--blueLight)' : 'transparent'};
 	border-radius: 4px;
+	width: fit-content;
 `;
 
 export default function Button({

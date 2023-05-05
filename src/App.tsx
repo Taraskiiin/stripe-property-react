@@ -1,4 +1,5 @@
 import Navigation from './components/organisms/Navigation';
+import FeaturedDevelopments from './components/templates/FeaturedDevelopments';
 import MainSectionStyled from './components/templates/MainSection';
 import Over20YearsSection from './components/templates/Over20YearsSection';
 import StatisticSectionStyled from './components/templates/StatisticSection';
@@ -18,6 +19,7 @@ function App() {
 			<LandingStyled>
 				<MainSectionStyled />
 				<Over20YearsSection />
+				<FeaturedDevelopments />
 				<StatisticSectionStyled />
 				<FeedbacksCarousel />
 				<GridSection />
