@@ -1,4 +1,5 @@
 import GridItem from '../atoms/GridItem';
+import TransparentTitle from '../atoms/TransparentTitle';
 import styled from 'styled-components';
 
 const gridData = [
@@ -31,53 +32,68 @@ const gridData = [
 
 const GridSectionStyled = styled.section`
 	padding: 160px 0;
-	display: grid;
-	gap: 32px;
-	grid-template-columns: repeat(3, 480px);
-	grid-template-rows: repeat(3, 300px);
-	justify-content: center;
+	position: relative;
 
-	.first-block {
-		height: 300px;
-		width: 480px;
-		padding: 0 48px;
-		grid-area: 1 / 1 / 2 / 2;
-		display: flex;
-		flex-direction: column;
+	.transparent-title {
+		position: absolute;
+		left: 50%;
+		top: 5%;
+		transform: translate(-50%, -5%);
+		z-index: 0;
+	}
+
+	.grid {
+		display: grid;
+		gap: 32px;
+		grid-template-columns: repeat(3, 480px);
+		grid-template-rows: repeat(3, 300px);
 		justify-content: center;
-		gap: 20px;
-		border: 1px solid rgba(22, 28, 36, 0.1);
-		border-radius: 4px;
+		position: relative;
+		z-index: 3;
 
-		h3 {
-			font-style: normal;
-			font-weight: 500;
-			font-size: 32px;
-			line-height: 44px;
-			color: var(--primary);
-		}
-
-		p {
-			font-style: normal;
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 28px;
-			color: var(--secondary);
-		}
-
-		button {
-			cursor: pointer;
-			border: none;
-			background: transparent;
-			width: fit-content;
-			font-style: normal;
-			font-weight: 600;
-			font-size: 16px;
-			line-height: 28px;
-			color: var(--primary);
+		.first-block {
+			height: 300px;
+			width: 480px;
+			padding: 0 48px;
+			grid-area: 1 / 1 / 2 / 2;
 			display: flex;
-			align-items: center;
-			gap: 6px;
+			flex-direction: column;
+			justify-content: center;
+			gap: 20px;
+			border: 1px solid rgba(22, 28, 36, 0.1);
+			border-radius: 4px;
+			background-color: var(--white);
+
+			h3 {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 32px;
+				line-height: 44px;
+				color: var(--primary);
+			}
+
+			p {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 28px;
+				color: var(--secondary);
+			}
+
+			button {
+				cursor: pointer;
+				border: none;
+				background: transparent;
+				width: fit-content;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 28px;
+				color: var(--primary);
+				display: flex;
+				align-items: center;
+				gap: 6px;
+			}
 		}
 	}
 `;
@@ -85,21 +101,24 @@ const GridSectionStyled = styled.section`
 export default function GridSection() {
 	return (
 		<GridSectionStyled>
-			<div className='first-block'>
-				<h3>News & Events</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus magna
-					justo, lacinia eget consectetur sed convallis at tellus vivamus magna
-					justo.
-				</p>
-				<button>
-					<span>View all posts</span>
-					<img alt='arrow icon' src='assets/right-arrow.svg' />
-				</button>
+			<TransparentTitle title='News & Events' />
+			<div className='grid'>
+				<div className='first-block'>
+					<h3>News & Events</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+						magna justo, lacinia eget consectetur sed convallis at tellus
+						vivamus magna justo.
+					</p>
+					<button>
+						<span>View all posts</span>
+						<img alt='arrow icon' src='assets/right-arrow.svg' />
+					</button>
+				</div>
+				{gridData.map((el) => (
+					<GridItem key={el.id} image={el.image} text={el.text} />
+				))}
 			</div>
-			{gridData.map((el) => (
-				<GridItem key={el.id} image={el.image} text={el.text} />
-			))}
 		</GridSectionStyled>
 	);
 }
