@@ -5,6 +5,13 @@ const FooterTopPartStyled = styled.div`
 	flex-direction: column;
 	gap: 16px;
 
+	img {
+		width: 64px;
+		height: 64px;
+		margin: 0 auto;
+		padding: 8px;
+	}
+
 	h3 {
 		font-style: normal;
 		font-weight: 500;
@@ -22,6 +29,51 @@ const FooterTopPartStyled = styled.div`
 		text-align: center;
 		color: var(--secondaryLight);
 	}
+
+	label {
+		position: relative;
+		width: 30%;
+		margin: 0 auto;
+		height: 20px;
+		padding: 0;
+		cursor: pointer;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 24px;
+			height: 24px;
+			background-image: url('assets/icons/edit-icon.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		input {
+			width: 100%;
+			border: none;
+			padding: 0;
+			background-color: transparent;
+			color: var(--white);
+			font-size: 16px;
+			line-height: 28px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid var(--white);
+
+			&:focus {
+				outline: none;
+			}
+
+			&::placeholder {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 28px;
+				color: var(--secondary);
+			}
+		}
+	}
 `;
 
 export default function FooterTopPart() {
@@ -30,7 +82,9 @@ export default function FooterTopPart() {
 			<img alt='email-icon' src='assets/icons/email-icon.svg' />
 			<h3>Newsletter subscribe</h3>
 			<p>Subscribe to our newsletter, we promise not to spam!</p>
-			<input type='email' />
+			<label>
+				<input type='email' placeholder='Your email address' />
+			</label>
 		</FooterTopPartStyled>
 	);
 }
