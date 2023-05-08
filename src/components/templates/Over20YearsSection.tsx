@@ -71,6 +71,56 @@ const Over20YearsSectionStyled = styled.section`
 		margin: 0 auto;
 		color: var(--secondary);
 	}
+
+	@media (max-width: 1900px) {
+		padding: 76px 0 76px 0;
+
+		h2 {
+			margin-bottom: 16px;
+
+			span {
+				line-height: 22px;
+			}
+
+			.title-numbers {
+				font-size: 40px;
+				line-height: 47px;
+			}
+		}
+
+		.description-primary {
+			font-size: 22px;
+			max-width: 50%;
+			line-height: 36px;
+		}
+
+		.description-secondary {
+			font-size: 16px;
+			line-height: 22px;
+			max-width: 50%;
+		}
+	}
+
+	@media (max-width: 1390px) {
+		.description-primary {
+			max-width: 80%;
+		}
+
+		.description-secondary {
+			max-width: 80%;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.description-primary {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.description-secondary {
+			font-size: 12px;
+			line-height: 18px;
+	}
 `;
 
 export default function Over20YearsSection() {

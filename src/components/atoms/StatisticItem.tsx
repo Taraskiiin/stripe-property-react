@@ -46,6 +46,40 @@ const StatisticItemStyled = styled.div`
 		line-height: 28px;
 		color: var(--secondaryLight);
 	}
+
+	@media (max-width: 1900px) {
+		h3 {
+			font-size: 23px;
+			line-height: 46px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		h3 {
+			font-size: 16px;
+			line-height: 46px;
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 16px;
+			text-align: center;
+			max-width: 80%;
+		}
+	}
+
+	@media (max-width: 900px) {
+		justify-content: flex-start;
+
+		p {
+			display: none;
+		}
+	}
 `;
 
 export default function StatisticItem({

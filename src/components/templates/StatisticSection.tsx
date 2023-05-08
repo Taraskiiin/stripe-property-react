@@ -37,6 +37,12 @@ const StatisticSectionStyled = styled.section`
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
+
+	@media (max-width: 1900px) {
+		padding: 81px 0 81px 0;
+		grid-gap: 16px;
+		grid-template-columns: repeat(4, 1fr);
+	}
 `;
 
 export default function StatisticSection() {

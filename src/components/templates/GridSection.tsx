@@ -96,6 +96,59 @@ const GridSectionStyled = styled.section`
 			}
 		}
 	}
+
+	@media (max-width: 1900px) {
+		padding: 80px 0;
+
+		.grid {
+			display: grid;
+			gap: 17px;
+			grid-template-columns: repeat(3, 240px);
+			grid-template-rows: repeat(3, 150px);
+
+			.first-block {
+				height: 150px;
+				width: 240px;
+				padding: 0 10px;
+				gap: 5px;
+
+				h3 {
+					font-size: 18px;
+					line-height: 22px;
+				}
+
+				p {
+					font-size: 12px;
+					line-height: 16px;
+				}
+			}
+		}
+
+		@media (max-width: 842px) {
+			.transparent-title {
+				display: none;
+			}
+
+			.grid {
+				grid-template-columns: repeat(2, 240px);
+				grid-template-rows: repeat(5, 150px);
+			}
+		}
+	}
+
+	@media (max-width: 590px) {
+		.grid {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+
+			.first-block {
+				height: min-content;
+				padding: 10px;
+				width: calc(100% - 20px);
+				margin: 0 auto;
+			}
+		}
+	}
 `;
 
 export default function GridSection() {

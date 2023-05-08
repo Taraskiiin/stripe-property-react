@@ -34,6 +34,10 @@ const NavigationStyled = styled.div`
 		flex-direction: column;
 		gap: 8px;
 	}
+
+	@media (max-width: 768px) {
+		width: 50px;
+	}
 `;
 
 export default function Navigation() {
