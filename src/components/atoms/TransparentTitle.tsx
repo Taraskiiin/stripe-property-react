@@ -14,6 +14,11 @@ const TransparentTitleStyled = styled.h2`
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	@media (max-width: 1900px) {
+		font-size: 80px;
+		line-height: 94px;
+	}
 `;
 
 export default function TransparentTitle({ title }: { title: string }) {

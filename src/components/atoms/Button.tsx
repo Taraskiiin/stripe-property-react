@@ -26,6 +26,13 @@ const ButtonStyled = styled.button<ButtonStyled>`
 		props.isBlue ? 'var(--blueLight)' : 'transparent'};
 	border-radius: 4px;
 	width: fit-content;
+
+	@media (max-width: 1025px) {
+			padding: 5px 16px;
+			font-size: 14px;
+			line-height: 18px;
+			white-space: nowrap; 
+			
 `;
 
 export default function Button({
