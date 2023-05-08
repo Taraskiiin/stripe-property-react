@@ -1,10 +1,9 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
+		"module": "esnext",
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
-
 		"skipLibCheck": true,
-		"module": "amd",
 		"moduleResolution": "node",
 		"allowJs": true,
 		"esModuleInterop": true,

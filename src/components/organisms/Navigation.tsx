@@ -1,6 +1,7 @@
 import BurgerButton from '../atoms/BurgerButton';
 import SocialMediaLink from '../atoms/SocialMediaLink';
 import styled from 'styled-components';
+import LogoutButton from '../atoms/LogoutButton';
 import { useState } from 'react';
 
 const socialMediaNav = [
@@ -19,8 +20,10 @@ const NavigationStyled = styled.div`
 	background-color: var(--white);
 	align-content: space-between;
 	display: flex;
-	justify-content: center;
-	padding-top: 32px;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 32px 0 32px 0;
 
 	nav {
 		position: absolute;
@@ -48,6 +51,7 @@ export default function Navigation() {
 					<SocialMediaLink key={el.id} href={el.href} srcIcon={el.srcIcon} />
 				))}
 			</nav>
+			<LogoutButton />
 		</NavigationStyled>
 	);
 }

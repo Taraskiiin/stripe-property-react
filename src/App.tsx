@@ -7,6 +7,7 @@ import FeedbacksCarousel from './components/templates/FeedbackCarousel';
 import GridSection from './components/templates/GridSection';
 import Footer from './components/templates/Footer';
 import styled from 'styled-components';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const LandingStyled = styled.div`
 	width: calc(100vw - 80px);
@@ -14,18 +15,30 @@ const LandingStyled = styled.div`
 `;
 
 function App() {
+	const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0();
+
+	if (isLoading) {
+		return <div>Loading ...</div>;
+	}
+
 	return (
 		<>
-			<LandingStyled>
-				<MainSectionStyled />
-				<Over20YearsSection />
-				<FeaturedDevelopments />
-				<StatisticSectionStyled />
-				<FeedbacksCarousel />
-				<GridSection />
-				<Footer />
-			</LandingStyled>
-			<Navigation />
+			{isAuthenticated ? (
+				<>
+					<LandingStyled>
+						<MainSectionStyled />
+						<Over20YearsSection />
+						<FeaturedDevelopments />
+						<StatisticSectionStyled />
+						<FeedbacksCarousel />
+						<GridSection />
+						<Footer />
+					</LandingStyled>
+					<Navigation />
+				</>
+			) : (
+				<button onClick={() => loginWithRedirect()}>Log In</button>
+			)}
 		</>
 	);
 }
