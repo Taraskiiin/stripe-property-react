@@ -8,6 +8,7 @@ import GridSection from './components/templates/GridSection';
 import Footer from './components/templates/Footer';
 import styled from 'styled-components';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useEffect } from 'react';
 
 const LandingStyled = styled.div`
 	width: calc(100vw - 80px);
@@ -25,9 +26,14 @@ function App() {
 		return <div>Loading ...</div>;
 	}
 
+	// eslint-disable-next-line react-hooks/rules-of-hooks
+	useEffect(() => {
+		!isAuthenticated && loginWithRedirect();
+	}, []);
+
 	return (
 		<>
-			{isAuthenticated ? (
+			{isAuthenticated && (
 				<>
 					<LandingStyled>
 						<MainSectionStyled />
@@ -40,8 +46,6 @@ function App() {
 					</LandingStyled>
 					<Navigation />
 				</>
-			) : (
-				<button onClick={() => loginWithRedirect()}>Log In</button>
 			)}
 		</>
 	);
