@@ -42,7 +42,7 @@ export default function NumberBlocks() {
 	const [selectedId, setSelectedId] = useState<string>('1');
 
 	return (
-		<NumberBlocksStyled>
+		<NumberBlocksStyled  className='numbers-wrapper'>
 			{numberBlocksData.map((el) => (
 				<div onClick={() => setSelectedId(el.id)} key={el.id}>
 					<NumberBlock

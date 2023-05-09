@@ -1,5 +1,5 @@
 import Logo from '../atoms/Logo';
-import NumberBlocksStyled from '../organisms/NumberBlocks';
+import NumberBlocks from '../organisms/NumberBlocks';
 import styled from 'styled-components';
 
 const MainSectionStyled = styled.section`
@@ -32,6 +32,38 @@ const MainSectionStyled = styled.section`
 		top: 40%;
 		transform: translate(-50%, -50%);
 	}
+
+	@media (max-width: 1390px) {
+		width: 100%;
+
+		.logo-block {
+			left: 50%;
+			top: 10%;
+			transform: translate(-50%, -50%);
+		}
+
+		.main-title {
+			font-size: 36px;
+			line-height: 48px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.numbers-wrapper {
+			display: none;
+		}
+	}
+
+	@media (max-width: 920px) {
+		height: 50vh;
+
+		.main-title {
+			font-size: 22px;
+			line-height: 26px;
+			width: 80%;
+		}
+	}
 `;
 
 export default function MainSection() {
@@ -41,7 +73,7 @@ export default function MainSection() {
 			<h1 className='main-title'>
 				Bespoke property developer specialising in digital
 			</h1>
-			<NumberBlocksStyled />
+			<NumberBlocks />
 		</MainSectionStyled>
 	);
 }
