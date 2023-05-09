@@ -83,6 +83,53 @@ const FooterMiddlePartStyled = styled.div`
 			gap: 8px;
 		}
 	}
+
+	@media (max-width: 1900px) {
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+	}
+
+	@media (max-width: 1390px) {
+		grid-template-columns: repeat(3, 1fr);
+		position: relative;
+
+		.social-column {
+			position: absolute;
+			bottom: 0;
+			left: 10%;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		display: flex;
+
+		& > div > h3 {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 12px;
+		}
+
+		.contacts-column {
+			.contacts-body {
+				.phones {
+					a {
+						font-size: 14px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+
+		.social-column {
+			position: static;
+		}
+	}
+
+	@media (max-width: 860px) {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 `;
 
 export default function FooterMiddlePart() {

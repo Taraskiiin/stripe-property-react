@@ -35,6 +35,26 @@ const FooterBottomPartStyled = styled.div`
 			}
 		}
 	}
+
+	@media (max-width: 860px) {
+		position: relative;
+		width: 80%;
+		margin: 0 auto;
+		padding-top: 0;
+		border-top: none;
+		flex-direction: column;
+		text-align: center;
+		gap: 8px;
+
+		a {
+			font-size: 14px;
+			line-height: 18px;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
 `;
 
 export default function FooterBottomPart() {

@@ -74,6 +74,48 @@ const FooterTopPartStyled = styled.div`
 			}
 		}
 	}
+
+	@media (max-width: 1200px) {
+		gap: 8px;
+
+		img {
+			width: 40px;
+			height: 40px;
+			padding: 4px;
+		}
+
+		h3 {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 12px;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		label {
+			margin-top: 10px;
+			max-width: 200px;
+
+			input {
+				font-size: 14px;
+				line-height: 18px;
+
+				&::placeholder {
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 678px) {
+		label {
+			width: 80%;
+		}
+	}
 `;
 
 export default function FooterTopPart() {

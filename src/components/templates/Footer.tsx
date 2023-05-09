@@ -10,6 +10,11 @@ const FooterStyled = styled.footer`
 	flex-direction: column;
 	gap: 160px;
 	padding: 120px 0 34px 0;
+
+	@media (max-width: 1390px) {
+		padding: 34px 0 34px 0;
+		gap: 60px;
+	}
 `;
 
 export default function Footer() {
