@@ -52,6 +52,39 @@ const FeedbacksCarouselStyled = styled.section`
 			}
 		}
 	}
+
+	@media (max-width: 1900px) {
+		padding: 80px 0 80px 0;
+		.swiper {
+			& > .swiper-button-prev {
+				left: 5%;
+			}
+			& > .swiper-button-next {
+				right: 5%;
+			}
+		}
+	}
+
+	@media (max-width: 1900px) {
+		padding: 40px 0 40px 0;
+
+		.swiper {
+			& > .swiper-button-prev,
+			& > .swiper-button-next {
+				right: 2%;
+				&::after {
+					content: '' !important;
+					width: 32px;
+					height: 15px;
+					background-size: contain;
+				}
+			}
+
+			& > .swiper-button-prev {
+				left: 2%;
+			}
+		}
+	}
 `;
 
 export default function FeedbacksCarousel() {

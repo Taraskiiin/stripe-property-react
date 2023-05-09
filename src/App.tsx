@@ -12,6 +12,10 @@ import { useAuth0 } from '@auth0/auth0-react';
 const LandingStyled = styled.div`
 	width: calc(100vw - 80px);
 	overflow: hidden;
+
+	@media (max-width: 768px) {
+		width: calc(100vw - 50px);
+	}
 `;
 
 function App() {

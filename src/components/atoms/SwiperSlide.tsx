@@ -63,6 +63,21 @@ const SwiperSlideStyled = styled.div`
 			color: var(--secondary);
 		}
 	}
+
+	@media (max-width: 1900px) {
+		max-width: 70%;
+		padding-left: 0;
+
+		.feedback-body {
+			max-width: 100%;
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		&::before {
+			display: none;
+		}
+	}
 `;
 
 export default function SwiperSlide({
